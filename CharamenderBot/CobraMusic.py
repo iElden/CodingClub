@@ -69,7 +69,7 @@ class MusicClient:
 
     async def disconnect(self):
         await self.voice_client.disconnect()
-        del clients[str(self.message.guild.id)]
+        del clients[str(self.guild_id)]
 
     async def pause(self):
         self.voice_client.pause()
